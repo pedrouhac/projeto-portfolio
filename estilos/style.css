@@ -199,3 +199,42 @@ section#social, article{
     gap: 30px;
 
   }
+}
+
+#formacao-container{
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+
+.curso{
+  margin-bottom: 20px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 10px;
+  border-left: 6px solid var(--destaque-inverso);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.11);
+}
+
+.curso:hover{
+  border-color: var(--destaque);
+  border-width: 15px;
+  transition: border-color 0.5s, border-width 0.5s;
+  cursor: pointer;
+}
+
+.perido{
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.instituicao{
+ color: var(--destaque-inverso);
+}
+
+.diploma{
+  margin-top: 5px;
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
