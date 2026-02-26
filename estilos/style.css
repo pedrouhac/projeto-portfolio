@@ -19,6 +19,7 @@
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
+  background-color: var(--fundo-principal);
 }
 
 header{
@@ -51,4 +52,67 @@ header{
   background-color: #66bbff;
   color: #0077ff;
   transition: background-color 0.5s, color 0.5s;
+}
+
+main{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 90vw 1fr;
+} 
+
+#social{
+  margin-top: 20px;
+  grid-column: 2;
+  background-color: var(--fundo-card);
+  padding: 20px 10px;
+
+  border-radius: 10px;
+}
+
+#social img{
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 5px solid var(--fundo-principal);
+  outline: 5px solid var(--destaque);
+}
+
+#social h1{
+  color: var(--destaque);
+  margin: 10px 0px;
+  font-size: 1.5em;
+  
+}
+
+#social p{
+  color: var(--texto);
+  margin-top: 10px;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 0px 5px;
+  text-indent: 20px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+#social a{
+  color: #0077ff;
+  text-decoration: none;
+}
+
+#redes-sociais{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+#redes-sociais a:hover{
+  color: var(--destaque-inverso);
+  transition: color 0.3s;
 }
