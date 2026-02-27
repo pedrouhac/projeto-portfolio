@@ -10,6 +10,15 @@
   --fundo-card: #ffffff; 
 }
 
+body.escuro{
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -20,6 +29,7 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   background-color: var(--fundo-principal);
+  transition: background-color 0.5s, color 0.5s;
 
 }
 
@@ -141,12 +151,12 @@ section#social, article{
   margin-bottom: 20px;
 }
 
-#apresentacao{
+#video{
   display: relative;
   width: 100%;
   aspect-ratio: 16/9;
   margin: auto;
-  
+
 }
 
 #video iframe{
@@ -154,6 +164,7 @@ section#social, article{
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   
 }
@@ -310,6 +321,23 @@ footer a:hover{
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 
+  }
+
+  main{
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  #social{
+    grid-column: 2/3;
+    margin: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 79px;
+  }
+
+  #detalhes{
+    grid-column: 3/4;
+    margin: 20px 20px 20px 0px
   }
 
   .projeto{
