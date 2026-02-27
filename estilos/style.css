@@ -31,6 +31,7 @@ header{
   justify-content: flex-end;
   padding: 15px;
   
+  
 }
 
 #menu ul{
@@ -46,12 +47,13 @@ header{
   font-size: 0.9em;
   padding: 12px 15px;
   border-radius: 10px;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 #menu a:hover{
   background-color: var(--destaque-inverso);
   color: var(--destaque);
-  transition: background-color 0.5s, color 0.5s;
+  
 }
 
 main{
@@ -87,6 +89,8 @@ main{
   color: var(--destaque);
   margin: 10px 0px;
   font-size: 1.5em;
+  text-align: center;
+  
   
 }
 
@@ -96,8 +100,9 @@ main{
   font-size: 0.8em;
   font-weight: 300;
   text-indent: 20px;
-  text-align: justify;
+  text-align: center;
   margin-bottom: 20px;
+  padding: 0px 20px;
 }
 
 #social a{
@@ -193,14 +198,6 @@ section#social, article{
   border-bottom-left-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {
-  #skills-container{
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-
-  }
-}
-
 #formacao-container{
   display: flex;
   flex-flow: column-reverse nowrap;
@@ -213,12 +210,12 @@ section#social, article{
   border-radius: 10px;
   border-left: 6px solid var(--destaque-inverso);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.11);
+  transition: border-color 0.5s, border-width 0.5s;
 }
 
 .curso:hover{
   border-color: var(--destaque);
   border-width: 15px;
-  transition: border-color 0.5s, border-width 0.5s;
   cursor: pointer;
 }
 
@@ -238,3 +235,76 @@ section#social, article{
   font-weight: 100;
 }
 
+#projetos-container{
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+
+.projeto{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--fundo-principal);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-left: 6px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}
+
+.projeto:hover{
+  border-color: var(--destaque);
+  border-width: 15px;
+  cursor: pointer;
+}
+
+.foto{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.nome-projeto{
+  color: var(--destaque-inverso);
+  font-size: 1.4em;
+}
+
+.projeto .descricao{
+  font-size: 0.8em;
+  color: var(--texto);
+  margin: 5px 0px;
+}
+
+.projeto details{
+  font-size: 0.8em;
+  color: var(--texto);
+}
+
+
+
+@media screen and (min-width: 768px) {
+  #skills-container{
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+  }
+
+  .projeto{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .foto{
+    width: 20%;
+    border-radius: 10px;
+    max-height: 150px;
+    max-width: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    overflow: hidden;
+    margin-left: 50px;
+
+}
+}
